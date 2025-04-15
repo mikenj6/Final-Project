@@ -1,0 +1,408 @@
+/* Reset & Basic Settings */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Use "Poppins" for body text, "Playfair Display" for headings */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #001f3f; /* Dark Navy */
+  color: #fff;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Container to center the entire main content */
+.main-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Headings: Use Playfair Display */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Header: Centered Navigation on Black Background */
+header {
+  background: #000;
+  width: 100%;
+}
+
+/* Adjusted Nav UL to be a centered row within a max-width */
+header nav ul {
+  display: flex;
+  justify-content: space-around; /* Even space between links */
+  align-items: center;
+  list-style: none;
+  max-width: 1200px;   /* Limit horizontal spread */
+  margin: 0 auto;      /* Center the entire nav within the header */
+  padding: 1rem 0;     /* Some vertical padding for aesthetics */
+}
+
+header nav ul li {
+  text-align: center;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  transition: color 0.3s ease;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+header nav ul li a:hover {
+  color: #ff9800;
+}
+
+/* Intro Container: Profile in Upper-Left with Intro Text */
+.intro-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 100%;
+  padding: 2rem;
+}
+
+/* Profile: Fixed Circular Image in the Upper-Left */
+.profile {
+  flex: 0 0 220px;
+  margin-right: 2rem;
+}
+
+.profile img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%; /* Perfect circle */
+  border: 3px solid #fff;
+  opacity: 0;
+  animation: vaporize 1.5s ease-out forwards;
+}
+
+@keyframes vaporize {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    filter: blur(12px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.95);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Intro Content: Text that wraps around the profile image */
+.intro-content {
+  flex: 1;
+  min-width: 250px;
+}
+
+.intro-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.intro-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+/* Main Content Grid Layout for Additional Sections */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+}
+
+.grid-item {
+  background: transparent;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  cursor: pointer; /* Indicates collapsible sections */
+}
+
+/* Section Titles */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding-bottom: 0.5rem;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* (Collapsible sections CSS is defined above) */
+
+/* Project Grid */
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: #fff;
+  color: #001f3f;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Unordered Lists */
+ul {
+  list-style: disc inside;
+  max-width: 600px;
+  margin: 1rem auto;
+  text-align: left;
+}
+
+/* Technical Specs: Full-Width Horizontal Scrolling (NOT Collapsible) */
+#technical-specs {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.scrolling-menu {
+  overflow: hidden;
+  position: relative;
+  padding: 1rem 0;
+}
+
+.scrolling-wrapper {
+  display: flex;
+  width: 200%;
+  animation: scrollLeft 30s linear infinite;
+}
+
+.scrolling-wrapper ol {
+  display: flex;
+  list-style-type: decimal;
+  margin: 0;
+  padding: 0;
+}
+
+.scrolling-wrapper ol li {
+  display: inline-block;
+  margin: 0 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.scrolling-wrapper ol li img {
+  max-width: 80px;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.scrolling-wrapper ol li img:hover {
+  transform: scale(1.1);
+}
+
+.scrolling-wrapper ol li p {
+  margin-top: 0.5rem;
+  color: inherit;
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Contact Form */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 1rem auto;
+}
+
+#contact form input,
+#contact form textarea {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#contact form button {
+  padding: 0.5rem;
+  background: #000;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#contact form button:hover {
+  background: #ff9800;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Fade-In Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Astrion Logo Sizing */
+.company-logo img {
+  max-width: 150px;
+  width: 100%;
+  display: block;
+  margin: 1rem auto 0 auto;
+}
+
+/* Collapsible Sections (Pure CSS) */
+/* By default, collapsed state: only 5rem tall */
+.collapsible {
+  max-height: 5rem;
+  overflow: hidden;
+  transition: max-height 1.5s ease-in-out;
+}
+
+/* When hovered or focused, expand to fully show content.
+   Use a large max-height that will exceed your content’s height (adjust as needed) */
+.collapsible:hover,
+.collapsible:focus-within {
+  max-height: 1000px;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .intro-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .intro-content {
+    text-align: center;
+  }
+
+  /* For mobile, disable collapsible transitions (always fully expanded) */
+
+  .collapsible {
+
+    max-height: none !important;
+
+    transition: none !important;
+
+  }
+
+  /* Grid Layout Adjustment: Section Title on Left, Content on Right */
+
+  .grid-container .grid-item {
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+  }
+
+  .grid-container .grid-item h2 {
+
+    flex: 0 0 35%;
+
+    margin-right: 1rem;
+
+    border: none;
+
+    padding: 0;
+
+    font-size: 1.8rem;
+
+  }
+
+  .grid-container .grid-item p,
+
+  .grid-container .grid-item ul {
+
+    flex: 1;
+
+    font-size: 1.2rem;
+
+  }
+
+  /* Contact form adjustments for mobile */
+
+  #contact form {
+
+    width: 100%;
+
+    max-width: 100%;
+
+    padding: 0 1rem;
+
+  }
+
+  #contact form input,
+
+  #contact form textarea {
+
+    font-size: 1.2rem;
+
+  }
+
+  #contact form button {
+
+    font-size: 1.2rem;
+
+  }
+
+}

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Portfolio</title>
+    <!-- Import Google Fonts: Poppins for body text and Playfair Display for headings -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header: Centered Navigation on Black Background -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#hello">Intro</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#plans-for-summer">Plans for Summer</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#coursework">Coursework</a></li>
+          <li><a href="#clubs">Clubs &amp; Organizations</a></li>
+          <li><a href="#awards">Awards &amp; Certifications</a></li>
+          <li><a href="#volunteer">Volunteer</a></li>
+          <li><a href="#technical-specs">Technical Specs</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content Wrapper for Centering -->
+    <div class="main-wrapper">
+      <!-- Intro Section: Profile in Upper-Left with Intro Text -->
+      <main class="intro-container">
+        <div class="profile">
+          <img src="images/me.png" alt="My Profile Photo" />
+        </div>
+        <div class="intro-content">
+          <h1><span id="typed"></span></h1>
+          <p>
+            I'm Michael Njoku — a dedicated sophomore Computer Science and Engineering student at the University of Michigan (graduating April 2027). Passionate about machine learning, computer vision, and full-stack development, I create innovative solutions that make an impact.
+          </p>
+          <p>
+            Explore my projects, coursework, clubs, and certifications—all designed to showcase my technical expertise and creative problem-solving skills.
+          </p>
+        </div>
+      </main>
+
+      <!-- Main Content Grid Container for Additional Sections -->
+      <main class="grid-container">
+        <!-- About Section (Collapsible) -->
+        <section id="about" class="grid-item fade-in collapsible">
+          <h2>About Me</h2>
+          <p>
+            I specialize in developing cutting-edge solutions spanning machine learning, computer vision, and full-stack web development. My work includes a Stock Market Simulator (C++), a Machine Code Assembler (C), and a Shortest Path Optimization System (C++/Python). I continuously strive for innovation and excellence.
+          </p>
+        </section>
+
+        <!-- Plans for Summer Section (Collapsible) -->
+        <section id="plans-for-summer" class="grid-item fade-in collapsible">
+          <h2>Plans for Summer</h2>
+          <p>
+            This summer, I will be joining <strong>Astrion</strong>, a government contract company specializing in advanced systems engineering and software solutions focused on missile technology and defense applications. They deliver high-performance, reliable solutions in a secure environment, and I will work as a Software Engineer in their Systems Engineer group in Columbia, Maryland while I complete the security clearance process.
+          </p>
+          <div class="company-logo">
+            <img src="images/astrion.jpg" alt="Astrion Logo" />
+          </div>
+        </section>
+
+        <!-- Projects Section (Collapsible) -->
+        <section id="projects" class="grid-item fade-in collapsible">
+          <h2>My Projects</h2>
+          <div class="project-container">
+            <div class="project-card fade-in">
+              <h3>Stock Market Simulator</h3>
+              <p>
+                A C++ machine learning program leveraging NLP to classify forum postings while optimizing data structures for large-scale, real-time analysis.
+              </p>
+            </div>
+            <div class="project-card fade-in">
+              <h3>Machine Code Assembler &amp; Simulator</h3>
+              <p>
+                Built an assembler in C converting assembly code into machine code with binary encoding, label translation, and offset computation—paired with a simulator for pipeline validation.
+              </p>
+            </div>
+            <div class="project-card fade-in">
+              <h3>Shortest Path Optimization System</h3>
+              <p>
+                Engineered a system in C++/Python using NetworkX and Matplotlib to compute and visualize optimal paths in weighted graphs, with dynamic adjustments for sparse graphs.
+              </p>
+            </div>
+            <div class="project-card fade-in">
+              <h3>Adaptive Scheduler Assistant</h3>
+              <p>
+                Created a scheduling tool with Python, Flask, React, and TensorFlow that intelligently prioritizes tasks—significantly reducing conflicts.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Relevant Coursework Section (Collapsible) -->
+        <section id="coursework" class="grid-item fade-in collapsible">
+          <h2>Relevant Coursework</h2>
+          <ul>
+            <li>Data Structures and Algorithms</li>
+            <li>Computer Organization</li>
+            <li>Data Science</li>
+            <li>Web Design &amp; Development</li>
+            <li>Process and Throughput Optimization</li>
+            <li>Discrete Mathematics</li>
+            <li>Calculus I &amp; II</li>
+            <li>Computational Linear Algebra</li>
+          </ul>
+        </section>
+
+        <!-- Clubs & Organizations Section (Collapsible) -->
+        <section id="clubs" class="grid-item fade-in collapsible">
+          <h2>Clubs &amp; Organizations</h2>
+          <p>
+            <strong>NSBE:</strong> Active member of the National Society of Black Engineers, participating in workshops and networking events aimed at empowering underrepresented engineers.
+          </p>
+          <p>
+            <strong>ColorStack:</strong> Contributor to ColorStack, a community dedicated to increasing diversity in tech through mentorship and career development.
+          </p>
+          <p>
+            <strong>ColorCoded:</strong> Participant in ColorCoded, an initiative focused on fostering inclusive tech communities via hackathons and collaborative projects.
+          </p>
+          <p>
+            <strong>M-Fly:</strong> Computer Vision Programmer developing ML algorithms for sensor calibration in drone systems.
+          </p>
+          <p>
+            <strong>Void Tech:</strong> Software Developer applying machine learning models and designing robust backend solutions.
+          </p>
+        </section>
+
+        <!-- Awards & Certifications Section (Collapsible) -->
+        <section id="awards" class="grid-item fade-in collapsible">
+          <h2>Awards &amp; Certifications</h2>
+          <ul>
+            <li><strong>Network+ Certified:</strong> Recognized expertise in installing, maintaining, and troubleshooting network devices.</li>
+            <li><strong>CCCTC Graduate:</strong> Completed an intensive program in cybersecurity and networking emphasizing practical, industry-standard practices.</li>
+            <li><strong>CCNAv7 SRWE:</strong> Specialized training in switching technologies and router operations tailored for small-to-medium business networks.</li>
+            <li><strong>CCNAv7 ITN:</strong> In-depth knowledge of modern networking architectures, protocols, and communication fundamentals.</li>
+          </ul>
+        </section>
+
+        <!-- Volunteer Work Section (Collapsible) -->
+        <section id="volunteer" class="grid-item fade-in collapsible">
+          <h2>Volunteer Work</h2>
+          <p>
+            <strong>Camp Counselor:</strong> Served as an inspiring role model for children (ages 5–11) at Camp Opportunity—a nonprofit camp dedicated to nurturing growth, resilience, and well-being among vulnerable youth.
+          </p>
+        </section>
+
+        <!-- Contact Section (Collapsible) -->
+        <section id="contact" class="grid-item">
+          <h2>Contact Me</h2>
+          <form action="https://formspree.io/f/mvgkynjp" method="POST">
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" placeholder="Your Name" required />
+            
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="Your Email" required />
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            
+            <button type="submit">Send</button>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <!-- Technical Specs Section (NOT Collapsible) -->
+    <section id="technical-specs">
+      <h2>Technical Specs</h2>
+      <div class="scrolling-menu">
+        <div class="scrolling-wrapper">
+          <!-- First Copy -->
+          <ol>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/C%2B%2B" target="_blank">
+                <img src="images/c++.png" alt="C/C++" />
+                <p>C/C++</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Java_(programming_language)" target="_blank">
+                <img src="images/Java.png" alt="Java" />
+                <p>Java</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">
+                <img src="images/Python.png" alt="Python" />
+                <p>Python</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">
+                <img src="images/JavaScript.png" alt="JavaScript" />
+                <p>JavaScript</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">
+                <img src="images/HTML.png" alt="HTML/CSS" />
+                <p>HTML/CSS</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/XML" target="_blank">
+                <img src="images/xml.webp" alt="XML" />
+                <p>XML</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/ARM_architecture" target="_blank">
+                <img src="images/ARM.png" alt="ARM" />
+                <p>ARM</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/SQL" target="_blank">
+                <img src="images/SQL.png" alt="SQL" />
+                <p>SQL</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Git" target="_blank">
+                <img src="images/Git.png" alt="Git" />
+                <p>Git</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/NumPy" target="_blank">
+                <img src="images/NumPy.png" alt="NumPy" />
+                <p>NumPy</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Pandas_(software)" target="_blank">
+                <img src="images/Pandas.png" alt="Pandas" />
+                <p>Pandas</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Matplotlib" target="_blank">
+                <img src="images/Matplotlib.png" alt="Matplotlib" />
+                <p>Matplotlib</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Flask_(web_framework)" target="_blank">
+                <img src="images/Flask.png" alt="Flask" />
+                <p>Flask</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/TensorFlow" target="_blank">
+                <img src="images/TensorFlow.png" alt="TensorFlow" />
+                <p>TensorFlow</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/React_(JavaScript_library)" target="_blank">
+                <img src="images/React.webp" alt="React" />
+                <p>React</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/NoSQL" target="_blank">
+                <img src="images/noSQL.png" alt="noSQL" />
+                <p>noSQL</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/NetworkX" target="_blank">
+                <img src="images/NetworkX.png" alt="NetworkX" />
+                <p>NetworkX</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Next.js" target="_blank">
+                <img src="images/nextjs.png" alt="Next.js" />
+                <p>Next.js</p>
+              </a>
+            </li>
+          </ol>
+          <!-- Second Copy for Seamless Loop -->
+          <ol>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/C%2B%2B" target="_blank">
+                <img src="images/c++.png" alt="C/C++" />
+                <p>C/C++</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Java_(programming_language)" target="_blank">
+                <img src="images/Java.png" alt="Java" />
+                <p>Java</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">
+                <img src="images/Python.png" alt="Python" />
+                <p>Python</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">
+                <img src="images/JavaScript.png" alt="JavaScript" />
+                <p>JavaScript</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">
+                <img src="images/HTML.png" alt="HTML/CSS" />
+                <p>HTML/CSS</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/XML" target="_blank">
+                <img src="images/xml.webp" alt="XML" />
+                <p>XML</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/ARM_architecture" target="_blank">
+                <img src="images/ARM.png" alt="ARM" />
+                <p>ARM</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/SQL" target="_blank">
+                <img src="images/SQL.png" alt="SQL" />
+                <p>SQL</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Git" target="_blank">
+                <img src="images/Git.png" alt="Git" />
+                <p>Git</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/NumPy" target="_blank">
+                <img src="images/NumPy.png" alt="NumPy" />
+                <p>NumPy</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Pandas_(software)" target="_blank">
+                <img src="images/Pandas.png" alt="Pandas" />
+                <p>Pandas</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Matplotlib" target="_blank">
+                <img src="images/Matplotlib.png" alt="Matplotlib" />
+                <p>Matplotlib</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Flask_(web_framework)" target="_blank">
+                <img src="images/Flask.png" alt="Flask" />
+                <p>Flask</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/TensorFlow" target="_blank">
+                <img src="images/TensorFlow.png" alt="TensorFlow" />
+                <p>TensorFlow</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/React_(JavaScript_library)" target="_blank">
+                <img src="images/React.webp" alt="React" />
+                <p>React</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/NoSQL" target="_blank">
+                <img src="images/noSQL.png" alt="noSQL" />
+                <p>noSQL</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/NetworkX" target="_blank">
+                <img src="images/NetworkX.png" alt="NetworkX" />
+                <p>NetworkX</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Next.js" target="_blank">
+                <img src="images/nextjs.png" alt="Next.js" />
+                <p>Next.js</p>
+              </a>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-contact">
+        <p>Phone: <a href="tel:4439836945">443-983-6945</a> | Email: <a href="mailto:mcnjoku6@gmail.com">mcnjoku6@gmail.com</a></p>
+      </div>
+      <p>&copy; 2025 Michael Njoku. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
